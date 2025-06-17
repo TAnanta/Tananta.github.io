@@ -16,14 +16,15 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      margin-left: 6em;
       align-items: center;
       background-color: #fff;
-      padding: 1em 2em;
+      padding: 1em 2em 1em 3em; /* Left padding matches main content */
       border-bottom: 1px solid #ddd;
     }
 
     header h1 {
+      margin-left: 1.5em;
       font-size: 18px;
       color: #a52a2a;
       margin: 0;
@@ -44,6 +45,11 @@
       max-width: 960px;
       margin: auto;
       padding: 2em;
+    }
+
+    /* Added wrapper with padding-left */
+    .content-padding {
+      padding-left: 3em; /* roughly 2 tabs */
     }
 
     /* FLEX ROW AT THE TOP */
@@ -126,65 +132,69 @@
 
 <!-- BODY CONTENT -->
 <div class="container">
+  <div class="content-padding"> <!-- Added wrapper starts -->
 
-  <!-- FLEX ROW: image + top content -->
-  <div class="top-section">
-    <img src="profilePicture.jpg" alt="My Profile Photo" class="profile-photo" />
+    <!-- FLEX ROW: image + top content -->
+    <div class="top-section">
+      <img src="profilePicture.jpg" alt="My Profile Photo" class="profile-photo" />
 
-    <div class="intro">
-      <h2 id="home">Tommy</h2>
-      <p>Software Developer</p>
-      <p>The University of Texas at Dallas<br/>Bachelors in Electrical Engineering</p>
+      <div class="intro">
+        <h2 id="home">Tommy</h2>
+        <p>Software Developer</p>
+        <p>The University of Texas at Dallas<br/>Bachelors in Electrical Engineering</p>
 
-      <p class="contact-info">
-        <strong>GitHub:</strong> <a href="https://github.com/Tananta" target="_blank">Tananta</a><br/>
-        <strong>Email:</strong> <a href="mailto:anantasomboontommy@gmail.com">anantasomboontommy@gmail.com</a><br/>
-        <strong>Location:</strong> Dallas, TX<br/>
-      </p>
+        <p class="contact-info">
+          <strong>GitHub:</strong> <a href="https://github.com/Tananta" target="_blank">Tananta</a><br/>
+          <strong>Email:</strong> <a href="mailto:anantasomboontommy@gmail.com">anantasomboontommy@gmail.com</a><br/>
+          <strong>Location:</strong> Dallas, TX<br/>
+        </p>
 
-      <blockquote>“Once you make a decision, the Universe conspires to make it happen.”</blockquote>
-    </div>
-  </div>
-
-  <!-- MAIN SECTION UNDER IMAGE -->
-  <div class="main">
-
-    <div class="status-line">
-      <span class="emoji">📌</span>
-      <strong>Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
+        <blockquote>“Once you make a decision, the Universe conspires to make it happen.”</blockquote>
+      </div>
     </div>
 
-    <div class="interest-line">
-      <span class="emoji">💡</span>
-      <strong>Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
+    <!-- MAIN SECTION UNDER IMAGE -->
+    <div class="main">
+
+      <div class="status-line">
+        <span class="emoji">📌</span>
+        <strong>Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
+      </div>
+
+      <div class="interest-line">
+        <span class="emoji">💡</span>
+        <strong>Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
+      </div>
+
+      <div class="section">
+        <p>
+          I graduated from The University of Texas at Dallas with a Bachelor's degree in Electrical Engineering and began my career as a Test Engineer at Texas Instruments. There, I developed test plans and programs for high-speed serializer and deserializer components, primarily using Visual Basic within Teradyne’s IG-XL platform. I also created Python scripts for bench testing, allowing us to modify bit registers specifically.
+        </p>
+        <p>
+          My current focus is building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been developing projects with C# and the .NET Framework, including a full-stack ASP.NET MVC application called the <span class="highlight">Rover Management System</span>, which supports pet and rover assignments, admin dashboards, and secure user access. I'm also exploring how to integrate AI into business applications for smarter automation.
+        </p>
+      </div>
+
+      <div class="section" id="cv">
+        <h3>CV</h3>
+        <p><a href="resume.pdf" target="_blank">Download my resume (PDF)</a></p>
+      </div>
+
+      <div class="section" id="projects">
+        <h3>Projects</h3>
+        <ul>
+        </ul>
+      </div>
+
+      <div class="section" id="other">
+        <h3>Other</h3>
+      </div>
+
     </div>
 
-    <div class="section">
-      <p>
-        I graduated from The University of Texas at Dallas with a Bachelor's degree in Electrical Engineering and began my career as a Test Engineer at Texas Instruments. There, I developed test plans and programs for high-speed serializer and deserializer components, primarily using Visual Basic within Teradyne’s IG-XL platform. I also created Python scripts for bench testing, allowing us to modify bit registers specifically.
-      </p>
-      <p>
-        My current focus is building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been developing projects with C# and the .NET Framework, including a full-stack ASP.NET MVC application called the <span class="highlight">Rover Management System</span>, which supports pet and rover assignments, admin dashboards, and secure user access. I'm also exploring how to integrate AI into business applications for smarter automation.
-      </p>
-    </div>
-
-    <div class="section" id="cv">
-      <h3>CV</h3>
-      <p><a href="resume.pdf" target="_blank">Download my resume (PDF)</a></p>
-    </div>
-
-    <div class="section" id="projects">
-      <h3>Projects</h3>
-      <ul>
-      </ul>
-    </div>
-
-    <div class="section" id="other">
-      <h3>Other</h3>
-    </div>
-
-  </div>
+  </div> <!-- Added wrapper ends -->
 </div>
 
 </body>
 </html>
+
