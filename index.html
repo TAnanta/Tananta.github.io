@@ -3,117 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tommy Anantasomboon | Software Developer</title>
+  <title>Tommy Anantasomboon</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fdfdfd;
+      background-color: #fcfbf5;
       color: #333;
       line-height: 1.6;
     }
+
     header {
-      background-color: #fff;
-      padding: 1em 2em;
-      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #fff;
+      padding: 1em 2em;
+      border-bottom: 1px solid #ddd;
     }
+
     header h1 {
+      font-size: 18px;
       color: #a52a2a;
       margin: 0;
     }
+
     nav a {
-      margin: 0 10px;
+      margin-left: 1.5em;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .container {
-      display: flex;
-      padding: 2em;
       max-width: 960px;
       margin: auto;
+      padding: 2em;
     }
-    .sidebar {
-      flex: 1;
-      padding-right: 2em;
+
+    /* FLEX ROW AT THE TOP */
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
     }
-    .sidebar img {
-      width: 100%;
-      max-width: 200px;
+
+    .profile-photo {
+      width: 150px;
       border-radius: 6px;
+      margin-right: 2em;
     }
+
+    .intro {
+      font-size: 12px;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .contact-info {
+      font-size: 12px;
+    }
+
+    blockquote {
+      font-size: 12px;
+      font-style: italic;
+      color: #555;
+      margin: 1em 0;
+    }
+
     .main {
-      flex: 2;
+      font-size: 14px;
     }
-    .info strong {
-      display: inline-block;
-      width: 80px;
-    }
+
     .section {
       margin-top: 1.5em;
     }
+
     .highlight {
       font-weight: bold;
       color: #0056b3;
     }
-    .status, .interests {
-      background-color: #f0f0f0;
-      padding: 1em;
-      border-left: 4px solid #ffc107;
+
+    .status-line, .interest-line {
+      font-size: 12px;
       margin-top: 1em;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .emoji {
+      font-size: 12px;
+      vertical-align: middle;
+      margin-right: 0.4em;
+    }
+
+    a {
+      color: #0056b3;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
+<!-- HEADER ROW -->
 <header>
   <h1>Tommy Anantasomboon</h1>
   <nav>
     <a href="#home">HOME</a>
-    <a href="#cv">CV</a>
+    <a href="#cv">Resume</a>
     <a href="#projects">PROJECTS</a>
     <a href="#other">OTHER</a>
   </nav>
 </header>
 
+<!-- BODY CONTENT -->
 <div class="container">
-  <div class="sidebar">
-    <img src="profilePicture.jpg" alt="profilePicture" />
+
+  <!-- FLEX ROW: image + top content -->
+  <div class="top-section">
+    <img src="your-photo.jpg" alt="Your photo" class="profile-photo" />
+
+    <div class="intro">
+      <h2 id="home">Tommy</h2>
+      <p>Software Developer</p>
+      <p>The University of Texas at Dallas<br/>Bachelors in Electrical Engineering</p>
+
+      <p class="contact-info">
+        <strong>GitHub:</strong> <a href="https://github.com/Tananta" target="_blank">Tananta</a><br/>
+        <strong>Email:</strong> <a href="mailto:anantasomboontommy@gmail.com">anantasomboontommy@gmail.com</a><br/>
+        <strong>Location:</strong> Dallas, TX<br/>
+      </p>
+
+      <blockquote>“Once you make a decision, the Universe conspires to make it happen.”</blockquote>
+    </div>
   </div>
+
+  <!-- MAIN SECTION UNDER IMAGE -->
   <div class="main">
-    <h2 id="home">Tananta</h2>
-    <p>Software Developer<br/>
-      Specialized in ASP.NET, C#, SQL, and full-stack solutions.</p>
 
-    <p class="info">
-      <strong>GitHub:</strong> <a href="https://github.com/Tananta">Tananta</a><br/>
-      <strong>Email:</strong> tananta [at] email [dot] com<br/>
-      <strong>Location:</strong> Dallas, TX<br/>
-    </p>
-
-    <blockquote>“Once You Make a Decision the Universe Conspires to Make it Happen - Ralph Waldo Emerson”</blockquote>
-
-    <div class="status">
-      <strong>📌 Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
+    <div class="status-line">
+      <span class="emoji">📌</span>
+      <strong>Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
     </div>
 
-    <div class="interests">
-      <strong>💡 Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
+    <div class="interest-line">
+      <span class="emoji">💡</span>
+      <strong>Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
     </div>
 
     <div class="section">
       <p>
-        I'm a developer passionate about designing clean, maintainable applications using the Microsoft tech stack. I’ve built tools and dashboards using C#, ASP.NET MVC, SQL Server, and Razor Views. I enjoy turning business requirements into technical solutions and collaborating with cross-functional teams.
+        I graduated from The University of Texas at Dallas with a Bachelor's degree in Electrical Engineering and began my career as a Test Engineer at Texas Instruments. There, I developed test plans and programs for high-speed serializer and deserializer components, primarily using Visual Basic within Teradyne’s IG-XL platform. I also created Python scripts for bench testing, allowing us to modify bit registers specifically.
       </p>
       <p>
-        My current project is the <span class="highlight">Rover Management System</span>, a full-stack ASP.NET MVC web app that supports pet and rover assignments, admin management, and secure user access.
+        My current focus is building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been developing projects with C# and the .NET Framework, including a full-stack ASP.NET MVC application called the <span class="highlight">Rover Management System</span>, which supports pet and rover assignments, admin dashboards, and secure user access. I'm also exploring how to integrate AI into business applications for smarter automation.
       </p>
     </div>
 
@@ -125,13 +176,11 @@
     <div class="section" id="projects">
       <h3>Projects</h3>
       <ul>
-        <li><a href="https://github.com/Tananta/RoverManager" target="_blank">Rover Manager</a> – ASP.NET MVC project with login, dashboard, and pet tracking features.</li>
       </ul>
     </div>
 
     <div class="section" id="other">
       <h3>Other</h3>
-      <p>Check back soon for blog posts, coding tips, and .NET learning resources.</p>
     </div>
 
   </div>
