@@ -3,64 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tommy Anantasomboon</title>
+  <title>Tommy Anantasomboon | Software Developer</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2em;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
       line-height: 1.6;
-      background: #fdfdfd;
-      color: #111;
     }
-    h1 {
-      margin-bottom: 0;
+    header {
+      background-color: #fff;
+      padding: 1em 2em;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    a {
-      color: #0366d6;
+    header h1 {
+      color: #a52a2a;
+      margin: 0;
+    }
+    nav a {
+      margin: 0 10px;
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
     }
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-top: 2em;
+    .container {
+      display: flex;
+      padding: 2em;
+      max-width: 960px;
+      margin: auto;
     }
-    .email {
-      font-family: monospace;
+    .sidebar {
+      flex: 1;
+      padding-right: 2em;
+    }
+    .sidebar img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 6px;
+    }
+    .main {
+      flex: 2;
+    }
+    .info strong {
+      display: inline-block;
+      width: 80px;
+    }
+    .section {
+      margin-top: 1.5em;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #0056b3;
+    }
+    .status, .interests {
+      background-color: #f0f0f0;
+      padding: 1em;
+      border-left: 4px solid #ffc107;
+      margin-top: 1em;
     }
   </style>
 </head>
 <body>
-  <h1>Tommy Huey</h1>
-  <p><strong>Software Developer</strong><br/>
-  Based in Dallas, TX.<br/>
-  <span class="email">thuey97 [at] gmail [dot] com</span></p>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>I’m a C# and ASP.NET developer with a passion for building efficient, accessible web applications. Currently working on the Rover Management System project.</p>
-  </div>
+<header>
+  <h1>Tommy Anantasomboon</h1>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#cv">CV</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#other">OTHER</a>
+  </nav>
+</header>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/tomthuey/RoverManager" target="_blank">Rover Management System</a> – An ASP.NET MVC application to manage rover assignments and pets.</li>
-    </ul>
+<div class="container">
+  <div class="sidebar">
+    <img src="profilePicture.jpg" alt="profilePicture" />
   </div>
+  <div class="main">
+    <h2 id="home">Tananta</h2>
+    <p>Software Developer<br/>
+      Specialized in ASP.NET, C#, SQL, and full-stack solutions.</p>
 
-  <div class="section">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" target="_blank">Download PDF</a></p>
-  </div>
+    <p class="info">
+      <strong>GitHub:</strong> <a href="https://github.com/Tananta">Tananta</a><br/>
+      <strong>Email:</strong> tananta [at] email [dot] com<br/>
+      <strong>Location:</strong> Dallas, TX<br/>
+    </p>
 
-  <div class="section">
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/tomthuey" target="_blank">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/tommy-huey" target="_blank">LinkedIn</a></li>
-    </ul>
+    <blockquote>“Once You Make a Decision the Universe Conspires to Make it Happen - Ralph Waldo Emerson”</blockquote>
+
+    <div class="status">
+      <strong>📌 Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
+    </div>
+
+    <div class="interests">
+      <strong>💡 Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
+    </div>
+
+    <div class="section">
+      <p>
+        I'm a developer passionate about designing clean, maintainable applications using the Microsoft tech stack. I’ve built tools and dashboards using C#, ASP.NET MVC, SQL Server, and Razor Views. I enjoy turning business requirements into technical solutions and collaborating with cross-functional teams.
+      </p>
+      <p>
+        My current project is the <span class="highlight">Rover Management System</span>, a full-stack ASP.NET MVC web app that supports pet and rover assignments, admin management, and secure user access.
+      </p>
+    </div>
+
+    <div class="section" id="cv">
+      <h3>CV</h3>
+      <p><a href="resume.pdf" target="_blank">Download my resume (PDF)</a></p>
+    </div>
+
+    <div class="section" id="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li><a href="https://github.com/Tananta/RoverManager" target="_blank">Rover Manager</a> – ASP.NET MVC project with login, dashboard, and pet tracking features.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="other">
+      <h3>Other</h3>
+      <p>Check back soon for blog posts, coding tips, and .NET learning resources.</p>
+    </div>
+
   </div>
+</div>
+
 </body>
 </html>
