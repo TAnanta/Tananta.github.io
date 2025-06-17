@@ -14,32 +14,31 @@
             line-height: 1.6;
         }
 
-        .navbar-custom {
-            display: flex;
-            align-items: center;
+        .navbar-wrapper {
             background: #FAF8EC;
-            padding: 15px 15px;
-            padding-left: 847px;
-            font-size: 14px;
-            border: none;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 4em;
             font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-            font-weight: 500;
-            gap: 1em;
         }
 
         .navbar-brand {
             color: #BB3322;
-            font-weight: bold;
-            margin: 0;
-            padding: 0;
+            font-weight: 700;
+            font-size: 18px;
             white-space: nowrap;
         }
 
         .navbar-links {
             display: flex;
-            gap: 1.5em;
-            justify-content: flex-start;
-            flex: none;
+            gap: 4em;
+            font-size: 12px;
+            font-weight: 500;
         }
 
             .navbar-links a {
@@ -55,33 +54,54 @@
         .container {
             max-width: 960px;
             margin: auto;
-            padding: 2em;
+            padding: 1.5em;
         }
 
         .content-padding {
             padding-left: 3em;
         }
 
-        .top-section {
+        .top-section-wrapper {
             display: flex;
-            align-items: flex-start;
+            justify-content: center;
             margin-bottom: 1.5em;
         }
 
+        .top-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 2em;
+            max-width: 680px;
+            width: 100%;
+        }
+
         .profile-photo {
-            width: 150px;
+            width: 225px;
             border-radius: 6px;
-            margin-right: 2em;
+            flex-shrink: 0;
         }
 
         .intro {
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1.4;
             flex: 1;
+            text-align: left;
         }
+
+            .intro h2 {
+                margin-top: 0;
+                margin-bottom: 0.3em;
+                font-size: 20px;
+            }
+
+            .intro p {
+                margin: 0.3em 0;
+            }
 
         .contact-info {
             font-size: 12px;
+            text-align: left;
+            margin-top: 1em;
         }
 
         blockquote {
@@ -89,14 +109,14 @@
             font-style: italic;
             color: #555;
             margin: 1em 0;
+            text-align: left;
         }
 
         .main {
-            font-size: 14px;
-        }
-
-        .section {
-            margin-top: 1.5em;
+            font-size: 16px;
+            max-width: 680px;
+            margin: auto;
+            text-align: left;
         }
 
         .highlight {
@@ -105,12 +125,15 @@
         }
 
         .status-line, .interest-line {
-            font-size: 12px;
+            max-width: 680px;
+            font-size: 14px;
             margin-top: 1em;
+            padding-left: 0;
+            text-align: left;
         }
 
         .emoji {
-            font-size: 12px;
+            font-size: 14px;
             vertical-align: middle;
             margin-right: 0.4em;
         }
@@ -127,80 +150,79 @@
             font-size: 20px;
             margin-bottom: 0.3em;
         }
+
+        .about-me {
+            max-width: 680px;
+            padding: 0 0em;
+            line-height: 1.5;
+            margin-top: 1em;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar-custom">
-        <span class="navbar-brand">Tommy Anantasomboon</span>
-        <div class="navbar-links">
-            <a href="#home">HOME</a>
-            <a href="#resume">RESUME</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#other">OTHER</a>
-        </div>
-    </nav>
+    <!-- NAV BAR -->
+    <div class="navbar-wrapper">
+        <nav class="navbar-container">
+            <span class="navbar-brand">Tommy Anantasomboon</span>
+            <div class="navbar-links">
+                <a href="#home">HOME</a>
+                <a href="#resume">RESUME</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#other">OTHER</a>
+            </div>
+        </nav>
+    </div>
 
-    <!-- BODY CONTENT -->
+    <!-- CONTAINER RIGHT OF PROFILE PICTURE -->
     <div class="container">
         <div class="content-padding">
-            <!-- FLEX ROW: image + top content -->
-            <div class="top-section">
-                <img src="profilePicture.jpg" alt="My Profile Photo" class="profile-photo" />
-                <div class="intro">
-                    <h2 id="home">Tommy Anantasomboon</h2>
-                    <p>
-                        Software Developer<br />
-                        Bachelor of Science in Electrical Engineering<br />U.S. Citizen
-                    </p>
 
-                    <p class="contact-info">
-                        <strong>GitHub:</strong> <a href="https://github.com/Tananta" target="_blank">Tananta</a><br />
-                        <strong>Email:</strong> <a href="mailto:anantasomboontommy@gmail.com">anantasomboontommy@gmail.com</a><br />
-                        <strong>Location:</strong> Dallas, TX<br />
-                    </p>
+            <div class="top-section-wrapper">
+                <div class="top-section">
+                    <img src="profilePicture.jpg" alt="My Profile Photo" class="profile-photo" />
+                    <div class="intro">
+                        <h2 id="home">Tommy Anantasomboon</h2>
+                        <p>
+                            Software Developer<br />
+                            Bachelor of Science in Electrical Engineering<br />U.S. Citizen
+                        </p>
 
-                    <blockquote>“Once you make a decision, the Universe conspires to make it happen.”</blockquote>
+                        <p class="contact-info">
+                            <strong>GitHub:</strong> <a href="https://github.com/Tananta" target="_blank">Tananta</a><br />
+                            <strong>Email:</strong> <a href="mailto:anantasomboontommy@gmail.com">anantasomboontommy@gmail.com</a><br />
+                            <strong>Location:</strong> Dallas, TX<br />
+                        </p>
+
+                        <blockquote>“Once you make a decision, the Universe conspires to make it happen.”</blockquote>
+                    </div>
                 </div>
             </div>
 
-            <!-- MAIN SECTION -->
+            <!-- EMOJI LINES -->
             <div class="main">
                 <div class="status-line">
-                    <span class="emoji">📌</span>
-                    <strong>Status:</strong> I am open to developer roles focused on C#, .NET, or full-stack development. Actively applying as of June 2025.
+                    <span class="emoji">🧰</span>
+                    <strong>Status:</strong> Focused on opportunities involving C# and .NET Framework to contribute to impactful projects.
                 </div>
 
                 <div class="interest-line">
-                    <span class="emoji">💡</span>
-                    <strong>Interests:</strong> ASP.NET MVC, backend services, SQL performance, frontend architecture, and systems design.
+                    <span class="emoji">💻</span>
+                    <strong>Interests:</strong> Low-code platforms, large language models, web applications, modern OOP languages.
                 </div>
 
                 <!-- ABOUT ME PARAGRAPHS -->
-                <div class="section">
+                <div class="section about-me">
                     <p>
                         I graduated from The University of Texas at Dallas with a Bachelor's degree in Electrical Engineering and began my career as a Test Engineer at Texas Instruments. There, I developed test plans and programs for high-speed serializer and deserializer components, primarily using Visual Basic within Teradyne’s IG-XL platform. I also created Python scripts for bench testing, allowing us to modify bit registers specifically.
                     </p>
                     <p>
-                        My current focus is building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been developing projects with C# and the .NET Framework, including a full-stack ASP.NET MVC application called the <span class="highlight">Rover Management System</span>, which supports pet and rover assignments, admin dashboards, and secure user access. I'm also exploring how to integrate AI into business applications for smarter automation.
+                        My current focus is on building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been independently working on projects involving C#, the .NET Framework, ASP.NET MVC, Swagger-documented APIs, and other projects that interest me, aiming to strengthen my practical development skills. I'm also exploring how to integrate AI into business applications for smarter automation.
                     </p>
                 </div>
-
-                <!-- SECTIONS -->
-                <div class="section" id="resume">
-                    <h3>RESUME</h3>
-                </div>
-
-                <div class="section" id="projects">
-                    <h3>PROJECTS</h3>
-                    <ul></ul>
-                </div>
-
-                <div class="section" id="other">
-                    <h3>OTHER</h3>
-                </div>
-
             </div>
         </div>
     </div>
