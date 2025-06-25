@@ -18,7 +18,6 @@
             background: #FAF8EC;
             padding: 15px 0;
             text-align: center;
-
         }
 
         .navbar-container {
@@ -111,6 +110,49 @@
             justify-content: center;
             align-items: center;
         }
+
+        /* 💡 NEW PROJECT STYLING BELOW */
+
+        .project-section {
+            margin-top: 2em;
+        }
+
+        .project {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 2em;
+        }
+
+            .project img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+            }
+
+        .project-text h3 {
+            margin: 0 0 0.3em;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .project-text p {
+            margin: 0 0 0.5em;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .project-text a {
+            font-size: 13px;
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+            .project-text a:hover {
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -131,13 +173,21 @@
     <div class="container">
         <!-- PROJECT SECTION -->
         <h1>Projects</h1>
+        <h2>Board Games</h2>
+        <div class="project-section">
 
-        <h2>Example Project</h2>
-        <p class="subtext">Description or technologies used</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-        </ul>
+            <div class="project">
+                <img src="images/camelUp.png" alt="Camel Up Probability Calculator">
+                <div class="project-text">
+                    <h3>Camel Up Probability Calculator</h3>
+                    <p>
+                        Calculator tool that simulates every possible dice roll order and every value those dice could produce, so that you can easily see which camel is likely to win the leg.
+                        <br />Built with C# and ASP.NET MVC. This project uses Razor Pages for the UI
+                    </p>
+                    <a href="https://github.com/TAnanta/CamelUp-Probability-Calculator" target="_blank">[GitHub]</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
