@@ -4,66 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tommy Anantasomboon - Other</title>
+    <link rel="stylesheet" href="style.css" />
+
     <style>
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FAF8EC;
-            color: #333;
-            line-height: 1.6;
-        }
-
-
-        .navbar-wrapper {
-            padding-top: .2em;
-            padding-left: .9em;
-            background: #FAF8EC;
-            margin: 0;
-            text-align: center;
-        }
-
-
-        .navbar-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 4em;
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-            line-height: 0;
-        }
-
-        .navbar-brand {
-            color: #BB3322;
-            font-weight: 700;
-            font-size: 18px;
-            white-space: nowrap;
-        }
-
-        .navbar-links {
-            display: flex;
-            gap: 4em;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .navbar-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .navbar-links a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: auto;
-            padding: 2.5em;
-            padding-top: 3.35em;
-        }
-
         h1 {
             font-size: 20px;
             border-bottom: 1px solid #aaa;
@@ -98,49 +41,35 @@
             margin-bottom: 2em;
         }
 
-        .caption strong {
-            display: block;
-            margin-bottom: 0.2em;
-        }
+            .caption strong {
+                display: block;
+                margin-bottom: 0.2em;
+            }
 
         a {
             color: #0056b3;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            font-size: 12px;
-            text-align: center;
-            padding: 15px 0;
-            width: 100%;
-        }
-
-        .footer-below .col-lg-12 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+            a:hover {
+                text-decoration: underline;
+            }
 
     </style>
 </head>
+
 <body>
 
-    <!-- NAV BAR -->
-    <div class="navbar-wrapper">
-        <nav class="navbar-container">
-            <span class="navbar-brand">Tommy Anantasomboon</span>
-            <div class="navbar-links">
-                <a href="index.html">HOME</a>
-                <a href="resume.html">RESUME</a>
-                <a href="projects.html">PROJECTS</a>
-                <a href="other.html">OTHER</a>
-            </div>
-        </nav>
-    </div>
+    <!-- NAV BAR (from header.html) -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+            });
+    </script>
 
     <div class="container">
         <!-- BLOG SECTION -->
@@ -201,17 +130,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        2025 Tommy Anantasomboon | Last Update: 06/18/2025
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Footer load error:', error));
+    </script>
 
 </body>
 </html>

@@ -4,61 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tommy Anantasomboon - Home</title>
+    <link rel="stylesheet" href="style.css" />
+
     <style>
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FAF8EC;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .navbar-wrapper {
-            background: #FAF8EC;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        .navbar-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 4em;
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-        }
-
-        .navbar-brand {
-            color: #BB3322;
-            font-weight: 700;
-            font-size: 18px;
-            white-space: nowrap;
-        }
-
-        .navbar-links {
-            display: flex;
-            gap: 4em;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-            .navbar-links a {
-                text-decoration: none;
-                color: #333;
-                font-weight: bold;
-            }
-
-                .navbar-links a:hover {
-                    text-decoration: underline;
-                }
-
-        .container {
-            max-width: 960px;
-            margin: auto;
-            padding: 1.5em;
-            padding-top: 8.5em;
-        }
-
         .content-padding {
             padding-left: 3em;
         }
@@ -163,35 +111,21 @@
             margin-right: auto;
         }
 
-        footer {
-            font-size: 12px;
-            text-align: center;
-            padding: 15px 0;
-            width: 100%;
-        }
-
-        .footer-below .col-lg-12 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
     </style>
 </head>
 <body>
 
-    <!-- NAV BAR -->
-    <div class="navbar-wrapper">
-        <nav class="navbar-container">
-            <span class="navbar-brand">Tommy Anantasomboon</span>
-            <div class="navbar-links">
-                <a href="index.html">HOME</a>
-                <a href="resume.html">RESUME</a>
-                <a href="projects.html">PROJECTS</a>
-                <a href="other.html">OTHER</a>
-            </div>
-        </nav>
-    </div>
+    <!-- NAV BAR (from header.html) -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+            });
+    </script>
+
 
     <!-- CONTAINER RIGHT OF PROFILE PICTURE -->
     <div class="container">
@@ -218,7 +152,7 @@
                 </div>
             </div>
 
-            <!-- STATUS | INTERESTSLINES -->
+            <!-- STATUS | INTERESTS LINES -->
             <div class="main">
                 <div class="status-line">
                     <span class="emoji">🧰</span>
@@ -233,10 +167,18 @@
                 <!-- ABOUT ME PARAGRAPHS -->
                 <div class="section about-me">
                     <p>
-                        I graduated from The University of Texas at Dallas with a Bachelor's degree in Electrical Engineering and began my career as a Test Engineer at Texas Instruments. There, I developed test plans and programs for high-speed serializer and deserializer components, primarily using Visual Basic within Teradyne’s IG-XL platform. I also created Python scripts for bench testing, allowing us to modify bit registers specifically.
+                        I started my career at Texas Instruments working on the Engineering Operations team, focusing on fault analysis & device recapture with semiconductor devices.
+                        I diagnosed device failures and developed new test coverage using primarily Visual Basic and Python.
+                        Later, I moved into New Product Development, where I was responsible for working with vendors to design hardware test equipment for both Final Test and Probe.
+                        I also lead Test development for a prototype high-speed SerDes chip, creating the scope of the test plan as well as the initial revision of software programs for the new chip.
+                        After leaving TI, I joined RSM as a Solutions Analyst, working with internal clients to develop workflow automations using Power Platform, which help improve operational efficiency and cost for the firm.
                     </p>
                     <p>
-                        My current focus is on building my skills within the Microsoft ecosystem. I have hands-on experience with Power Apps and Power Automate, designing low-code solutions that streamline business workflows. To deepen my technical expertise, I’ve been independently working on projects involving C#, the .NET Framework, ASP.NET MVC, Swagger-documented APIs, and other projects that interest me, aiming to strengthen my practical development skills. I'm also exploring how to integrate AI into business applications for smarter automation.
+                        The reason I left TI was to pursue software development, as I felt that it was much more rewarding to be able to problem-solve with code.
+                        I’ve always been interested in working with OOP, and since C# works well with Power Platform, I’ve started learning .NET along with AI use cases and applications because I believe these skills will be important for the future.
+                    </p>
+                    <p>
+                        I’m currently applying for my Master’s in Computer Science, with a focus on AI & ML for the Spring 2026 cycle.
                     </p>
                 </div>
             </div>
@@ -244,17 +186,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        2025 Tommy Anantasomboon | Last Update: 06/18/2025
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Footer load error:', error));
+    </script>
 
 </body>
 </html>
